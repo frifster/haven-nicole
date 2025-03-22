@@ -1,7 +1,8 @@
 .checkout-page {
   padding: 2rem 0;
+  padding-top: 4rem;
   min-height: calc(100vh - 80px);
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
 }
 
 .checkout-page .container {
@@ -13,8 +14,9 @@
 .checkout-page h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--text-color);
   font-size: 2.5rem;
+  font-family: serif;
 }
 
 .checkout-page .checkout-content {
@@ -24,13 +26,14 @@
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(139, 66, 151, 0.1);
+  border: 1px solid var(--accent-color);
 }
 
 .checkout-page .shipping-form h2,
 .checkout-page .order-summary h2 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--text-color);
   font-size: 1.5rem;
 }
 
@@ -48,14 +51,14 @@
 .checkout-page .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: var(--text-light);
   font-weight: 500;
 }
 
 .checkout-page .form-group input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondary-color);
   border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.2s;
@@ -63,7 +66,7 @@
 
 .checkout-page .form-group input:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: var(--primary-color);
 }
 
 .checkout-page .form-group input[type="text"]:full-width {
@@ -72,10 +75,10 @@
 
 .checkout-page .button-primary {
   padding: 1rem;
-  background-color: #4a90e2;
+  background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -83,13 +86,14 @@
 }
 
 .checkout-page .button-primary:hover {
-  background-color: #357abd;
+  background-color: #7a357f;
 }
 
 .checkout-page .order-summary {
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   padding: 1.5rem;
   border-radius: 8px;
+  border: 1px solid var(--secondary-color);
 }
 
 .checkout-page .summary-items {
@@ -101,7 +105,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .checkout-page .summary-item:last-child {
@@ -110,24 +114,24 @@
 
 .checkout-page .item-name {
   flex: 2;
-  color: #333;
+  color: var(--text-color);
 }
 
 .checkout-page .item-quantity {
   flex: 1;
   text-align: center;
-  color: #666;
+  color: var(--text-light);
 }
 
 .checkout-page .item-price {
   flex: 1;
   text-align: right;
-  color: #333;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .checkout-page .summary-totals {
-  border-top: 2px solid #eee;
+  border-top: 2px solid var(--secondary-color);
   padding-top: 1rem;
 }
 
@@ -135,15 +139,15 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: var(--text-light);
 }
 
 .checkout-page .summary-row.total {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--secondary-color);
   font-weight: 600;
-  color: #333;
+  color: var(--text-color);
   font-size: 1.1rem;
 }
 
@@ -152,22 +156,24 @@
   padding: 3rem 1rem;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(139, 66, 151, 0.1);
+  border: 1px solid var(--accent-color);
 }
 
 .checkout-page .empty-cart h1 {
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .checkout-page .empty-cart p {
-  color: #666;
+  color: var(--text-light);
   margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
   .checkout-page {
-    padding: 2rem 0;
+    padding: 1rem;
+    padding-top: 3rem;
   }
 
   .checkout-page .checkout-content {

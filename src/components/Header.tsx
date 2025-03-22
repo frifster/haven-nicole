@@ -40,7 +40,6 @@ const Header: React.FC = () => {
             <li><Link to="/how-it-works" onClick={handleLinkClick}>How It Works</Link></li>
             <li><Link to="/blog" onClick={handleLinkClick}>Blog</Link></li>
             <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
-            <li><Link to="/shipping-and-returns" onClick={handleLinkClick}>Shipping & Returns</Link></li>
           </ul>
         </nav>
 

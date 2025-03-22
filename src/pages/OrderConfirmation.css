@@ -1,7 +1,8 @@
 .order-confirmation-page {
-  padding: 3rem 0;
+  padding: 2rem 0;
+  padding-top: 4rem;
   min-height: calc(100vh - 80px);
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
 }
 
 .order-confirmation-page .container {
@@ -14,21 +15,23 @@
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(139, 66, 151, 0.1);
+  border: 1px solid var(--accent-color);
 }
 
 .order-confirmation-page .success-message {
   text-align: center;
   margin-bottom: 2rem;
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   border-radius: 8px;
+  border: 1px solid var(--secondary-color);
 }
 
 .order-confirmation-page .success-icon {
   width: 80px;
   height: 80px;
-  background-color: #4CAF50;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -39,31 +42,33 @@
 }
 
 .order-confirmation-page .success-message h1 {
-  color: #333;
+  color: var(--text-color);
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: serif;
 }
 
 .order-confirmation-page .success-message p {
-  color: #666;
+  color: var(--text-light);
   margin-bottom: 0.5rem;
 }
 
 .order-confirmation-page .order-number,
 .order-confirmation-page .order-date {
   font-weight: 500;
-  color: #333;
+  color: var(--text-color);
 }
 
 .order-confirmation-page .order-details {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   border-radius: 8px;
+  border: 1px solid var(--secondary-color);
 }
 
 .order-confirmation-page .order-details h2 {
-  color: #333;
+  color: var(--text-color);
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -77,7 +82,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .order-confirmation-page .order-item:last-child {
@@ -86,24 +91,24 @@
 
 .order-confirmation-page .item-name {
   flex: 2;
-  color: #333;
+  color: var(--text-color);
 }
 
 .order-confirmation-page .item-quantity {
   flex: 1;
   text-align: center;
-  color: #666;
+  color: var(--text-light);
 }
 
 .order-confirmation-page .item-price {
   flex: 1;
   text-align: right;
-  color: #333;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .order-confirmation-page .order-totals {
-  border-top: 2px solid #eee;
+  border-top: 2px solid var(--secondary-color);
   padding-top: 1rem;
 }
 
@@ -111,33 +116,34 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: var(--text-light);
 }
 
 .order-confirmation-page .total-row.final {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--secondary-color);
   font-weight: 600;
-  color: #333;
+  color: var(--text-color);
   font-size: 1.1rem;
 }
 
 .order-confirmation-page .shipping-details {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   border-radius: 8px;
+  border: 1px solid var(--secondary-color);
 }
 
 .order-confirmation-page .shipping-details h2 {
-  color: #333;
+  color: var(--text-color);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .order-confirmation-page .shipping-info {
-  color: #666;
+  color: var(--text-light);
 }
 
 .order-confirmation-page .shipping-info p {
@@ -147,18 +153,19 @@
 .order-confirmation-page .next-steps {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   border-radius: 8px;
+  border: 1px solid var(--secondary-color);
 }
 
 .order-confirmation-page .next-steps h2 {
-  color: #333;
+  color: var(--text-color);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .order-confirmation-page .next-steps p {
-  color: #666;
+  color: var(--text-light);
   margin-bottom: 0.5rem;
 }
 
@@ -170,35 +177,37 @@
 
 .order-confirmation-page .button {
   padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  border-radius: 30px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .order-confirmation-page .button-primary {
-  background-color: #4a90e2;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .order-confirmation-page .button-primary:hover {
-  background-color: #357abd;
+  background-color: #7a357f;
 }
 
 .order-confirmation-page .button-secondary {
-  background-color: #f8f9fa;
-  color: #333;
-  border: 1px solid #ddd;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .order-confirmation-page .button-secondary:hover {
-  background-color: #e9ecef;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 @media (max-width: 768px) {
   .order-confirmation-page {
-    padding: 2rem 0;
+    padding: 1rem;
+    padding-top: 3rem;
   }
 
   .order-confirmation-page .confirmation-content {

@@ -15,9 +15,11 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
 import OrderConfirmation from './pages/OrderConfirmation';
+import Privacy from './pages/Privacy';
 import Product from './pages/Product';
 import ShippingAndReturns from './pages/ShippingAndReturns';
 import Shop from './pages/Shop';
+import Terms from './pages/Terms';
 
 const App: React.FC = () => {
   return (
@@ -40,7 +42,9 @@ const App: React.FC = () => {
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/order-confirmation" element={<OrderConfirmation />} />
-              <Route path="/shipping-and-returns" element={<ShippingAndReturns />} />
+              <Route path="/shipping" element={<ShippingAndReturns />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </main>
           <Footer />
