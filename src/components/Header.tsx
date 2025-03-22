@@ -16,10 +16,15 @@ const Header: React.FC = () => {
           <Link to="/" onClick={handleLinkClick}>
             <h1>HAVEN</h1>
           </Link>
-          <div className="fairy-silhouette">
-            <svg width="20" height="20" viewBox="0 0 20 20">
-              <path d="M10,-5 C11.5,-10 12,-15 12.5,-5 C13,5 12.5,10 12,15 C11.5,20 10,15 9,10 Z" fill="currentColor" />
-              <path d="M11,0 C12,-5 12.5,0 12,5 C11.5,10 10,5 11,0 Z" fill="currentColor" />
+          <div className="butterfly-logo">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+              <path d="M16 8L16 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 12C4 8 4 14 8 16C12 18 16 14 14 12C12 10 10 10 8 12Z" fill="currentColor"/>
+              <path d="M8 20C4 24 4 18 8 16C12 14 16 18 14 20C12 22 10 22 8 20Z" fill="currentColor" fill-opacity="0.8"/>
+              <path d="M24 12C28 8 28 14 24 16C20 18 16 14 18 12C20 10 22 10 24 12Z" fill="currentColor"/>
+              <path d="M24 20C28 24 28 18 24 16C20 14 16 18 18 20C20 22 22 22 24 20Z" fill="currentColor" fill-opacity="0.8"/>
+              <path d="M16 8C14 4 13 6 15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 8C18 4 19 6 17 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
         </div>

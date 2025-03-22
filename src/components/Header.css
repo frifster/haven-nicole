@@ -11,6 +11,16 @@
   transition: background-color 0.3s ease;
 }
 
+@keyframes flapLeft {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  50% { transform: rotate(-20deg) translateX(-2px); }
+}
+
+@keyframes flapRight {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  50% { transform: rotate(20deg) translateX(2px); }
+}
+
 .header.menu-open {
   background: #fff;
 }
@@ -28,7 +38,8 @@
 .logo {
   display: flex;
   align-items: center;
-  cursor: default;
+  gap: 8px;
+  cursor: pointer;
 }
 
 .logo h1 {
@@ -37,11 +48,37 @@
   color: var(--primary-color);
   font-weight: bold;
   margin: 0;
-  cursor: default;
 }
 
-.fairy-silhouette {
+.butterfly-logo {
   color: var(--primary-color);
+  margin-top: 4px;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.butterfly-logo path {
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Left wings */
+.logo:hover .butterfly-logo path:nth-child(2),
+.logo:hover .butterfly-logo path:nth-child(3) {
+  animation: flapLeft 0.8s ease-in-out infinite;
+}
+
+/* Right wings */
+.logo:hover .butterfly-logo path:nth-child(4),
+.logo:hover .butterfly-logo path:nth-child(5) {
+  animation: flapRight 0.8s ease-in-out infinite;
+}
+
+/* Body and antennae - no animation */
+.logo:hover .butterfly-logo path:nth-child(1),
+.logo:hover .butterfly-logo path:nth-child(6),
+.logo:hover .butterfly-logo path:nth-child(7) {
+  animation: none;
 }
 
 .nav {
@@ -131,55 +168,50 @@
 }
 
 @media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: block;
-    order: 1;
+  .header-container {
+    padding: 0 20px;
   }
 
-  .cart-icon {
-    order: 2;
+  .logo h1 {
+    font-size: 28px;
+  }
+
+  .butterfly-logo {
+    transform: scale(0.7);
+  }
+
+  .mobile-menu-btn {
+    display: block;
   }
 
   .nav {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    background: #fff;
-    padding: 100px 20px 20px;
-    margin: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
     height: 100vh;
-    overflow-y: auto;
-    z-index: 999;
+    background: white;
+    padding: 80px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    margin: 0;
   }
 
   .nav.nav-open {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;
+    transform: translateX(0);
   }
 
   .nav ul {
     flex-direction: column;
+    gap: 20px;
     align-items: center;
-    gap: 30px;
-    padding: 20px 0;
   }
 
   .nav a {
-    font-size: 20px;
-    display: block;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
+    font-size: 18px;
   }
 
-  .nav a:active {
-    background-color: rgba(247, 198, 208, 0.2);
-    border-radius: 8px;
+  .cart-icon {
+    margin-right: 20px;
   }
 } 
