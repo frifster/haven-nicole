@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -12,8 +13,8 @@ const Hero: React.FC = () => {
           <p>Indulge in luxurious skincare that nurtures both your skin and soul.</p>
           
           <div className="hero-buttons">
-            <a href="#shop" className="button button-primary">Shop Now</a>
-            <a href="#learn-more" className="button button-secondary">Learn More</a>
+            <Link to="/shop" className="button button-primary">Shop Now</Link>
+            <Link to="/how-it-works" className="button button-secondary">Learn More</Link>
           </div>
         </div>
 
