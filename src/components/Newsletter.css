@@ -4,19 +4,41 @@
   text-align: center;
 }
 
+.newsletter h2 {
+  font-family: serif;
+  font-size: 42px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .newsletter-form {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
   margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 .newsletter-form input {
-  width: 350px;
-  height: 60px;
+  flex: 1;
+  min-width: 300px;
+  height: 56px;
   padding: 0 30px;
   border: 1px solid var(--primary-color);
-  border-radius: 30px;
+  border-radius: 100px;
   font-size: 16px;
   color: var(--primary-color);
   background-color: white;
@@ -29,27 +51,65 @@
 .newsletter-form input:focus {
   outline: none;
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(217, 168, 224, 0.2);
 }
 
 .newsletter-form .button {
-  height: 60px;
+  height: 56px;
+  min-width: 140px;
   padding: 0 40px;
+  white-space: nowrap;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form .button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 66, 151, 0.15);
 }
 
 @media (max-width: 768px) {
+  .newsletter {
+    padding: 40px 20px;
+  }
+
+  .newsletter h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
   .newsletter-form {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0;
+    width: 90%;
+    max-width: 400px;
   }
 
   .newsletter-form input {
     width: 100%;
-    max-width: 350px;
+    min-width: unset;
+    height: 48px;
+    font-size: 15px;
+    padding: 0 20px;
   }
 
   .newsletter-form .button {
     width: 100%;
-    max-width: 350px;
+    min-width: unset;
+    height: 48px;
+    font-size: 15px;
+    padding: 0 20px;
   }
 } 
