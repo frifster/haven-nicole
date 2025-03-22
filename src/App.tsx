@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import ScrollToTop from './components/ScrollToTop';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
+        <ScrollToTop />
         <Header />
         <main>
           <Routes>
