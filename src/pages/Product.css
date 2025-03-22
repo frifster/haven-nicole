@@ -155,4 +155,31 @@
   .info-section {
     text-align: left;
   }
+}
+
+.product-page .product-image {
+  background: linear-gradient(135deg, rgba(247, 198, 208, 0.2), rgba(217, 168, 224, 0.1));
+  padding: 60px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.product-page .bottle,
+.product-page .jar {
+  transform: scale(2);
+}
+
+.product-page .bottle.oil {
+  transform: scale(2);
+}
+
+.product-page .bottle.lotion {
+  transform: scale(2);
+}
+
+.product-page .jar {
+  transform: scale(2);
 } 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import './Shop.css';
 
 interface Product {
@@ -38,12 +39,38 @@ const products: Product[] = [
   }
 ];
 
+const BUNDLE_DISCOUNT = 0.15; // 15% discount
+
 const Shop: React.FC = () => {
+  const { addItem } = useCart();
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-PH', {
       style: 'currency',
       currency: 'PHP'
     }).format(price);
+  };
+
+  const handleAddToCart = (product: Product) => {
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      imageType: product.imageType
+    });
+  };
+
+  const handleAddBundle = () => {
+    const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
+    const discountedPrice = totalPrice * (1 - BUNDLE_DISCOUNT);
+    
+    // Add bundle as a single item with discounted price
+    addItem({
+      id: 'bundle',
+      name: 'Self-Love Body Care Set',
+      price: discountedPrice,
+      imageType: 'bundle'
+    });
   };
 
   return (
@@ -84,7 +111,12 @@ const Shop: React.FC = () => {
                   <p className="price">{formatPrice(product.price)}</p>
                 </div>
               </Link>
-              <button className="button button-primary">Add to Cart</button>
+              <button 
+                className="button button-primary"
+                onClick={() => handleAddToCart(product)}
+              >
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>
@@ -100,10 +132,15 @@ const Shop: React.FC = () => {
                 <li>Haven Muse - Exfoliating Body Scrub</li>
               </ul>
               <div className="bundle-pricing">
-                <p className="original-price">Total: {formatPrice(1499 + 1299 + 999)}</p>
-                <p className="bundle-price">Bundle Price: {formatPrice((1499 + 1299 + 999) * 0.85)}</p>
+                <p className="original-price">Total: {formatPrice(products.reduce((sum, product) => sum + product.price, 0))}</p>
+                <p className="bundle-price">Bundle Price: {formatPrice(products.reduce((sum, product) => sum + product.price, 0) * (1 - BUNDLE_DISCOUNT))}</p>
               </div>
-              <button className="button button-primary">Add Bundle to Cart</button>
+              <button 
+                className="button button-primary"
+                onClick={handleAddBundle}
+              >
+                Add Bundle to Cart
+              </button>
             </div>
           </div>
         </div>

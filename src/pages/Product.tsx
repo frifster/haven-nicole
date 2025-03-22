@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import './Product.css';
 
 interface ProductData {
@@ -100,6 +101,7 @@ const formatPrice = (price: number) => {
 const Product: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
   const product = products[productId || ''];
+  const { addItem } = useCart();
 
   if (!product) {
     return (
@@ -110,6 +112,15 @@ const Product: React.FC = () => {
       </div>
     );
   }
+
+  const handleAddToCart = () => {
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      imageType: product.imageType
+    });
+  };
 
   return (
     <div className="product-page">
@@ -143,7 +154,12 @@ const Product: React.FC = () => {
             <p className="size">{product.size}</p>
             <p className="price">{formatPrice(product.price)}</p>
             
-            <button className="button button-primary">Add to Cart</button>
+            <button 
+              className="button button-primary"
+              onClick={handleAddToCart}
+            >
+              Add to Cart
+            </button>
 
             <div className="product-info">
               <div className="info-section">

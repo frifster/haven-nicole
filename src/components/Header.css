@@ -130,10 +130,27 @@
   color: var(--primary-color);
   cursor: pointer;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .cart-icon:hover {
   color: var(--accent-color);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent-color);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu-btn {
