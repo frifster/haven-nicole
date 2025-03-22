@@ -1,44 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getProductList } from '../data/products';
 import './FeaturedProducts.css';
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  subtitle: string;
-  price: number;
-  imageType: string;
-}
-
-const products: Product[] = [
-  {
-    id: 'haven-glow',
-    name: 'Haven Glow',
-    description: 'Nourishing Body Oil',
-    subtitle: 'With Argan Oil & Vitamin E',
-    price: 1499,
-    imageType: 'oil'
-  },
-  {
-    id: 'haven-bliss',
-    name: 'Haven Bliss',
-    description: 'Moisturizing Body Lotion',
-    subtitle: 'With Shea Butter & Almond Oil',
-    price: 1299,
-    imageType: 'lotion'
-  },
-  {
-    id: 'haven-muse',
-    name: 'Haven Muse',
-    description: 'Exfoliating Body Scrub',
-    subtitle: 'With Sugar Crystals & Coconut Oil',
-    price: 999,
-    imageType: 'scrub'
-  }
-];
-
 const FeaturedProducts: React.FC = () => {
+  const products = getProductList();
+  
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-PH', {
       style: 'currency',
@@ -60,24 +27,15 @@ const FeaturedProducts: React.FC = () => {
               className="product-card"
             >
               <div className="product-image">
-                {product.imageType === 'oil' && (
-                  <div className="bottle oil">
-                    <div className="bottle-body"></div>
-                    <div className="bottle-neck"></div>
-                  </div>
-                )}
-                {product.imageType === 'lotion' && (
-                  <div className="bottle lotion">
-                    <div className="bottle-body"></div>
-                    <div className="bottle-neck"></div>
-                  </div>
-                )}
-                {product.imageType === 'scrub' && (
-                  <div className="jar">
-                    <div className="jar-body"></div>
-                    <div className="jar-lid"></div>
-                  </div>
-                )}
+                <iframe
+                  src={product.modelUrl}
+                  title={`${product.name} 3D View`}
+                  width="100%"
+                  height="300"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
               
               <div className="product-info">

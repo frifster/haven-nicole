@@ -10,6 +10,7 @@ interface Product {
   subtitle: string;
   price: number;
   imageType: string;
+  modelUrl: string;
   benefits: string[];
 }
 
@@ -21,6 +22,7 @@ const products: Product[] = [
     subtitle: 'With Sugar Crystals & Coconut Oil',
     price: 999,
     imageType: 'scrub',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=psc7mpldah',
     benefits: [
       'Gently removes dead skin cells',
       'Promotes skin renewal',
@@ -36,6 +38,7 @@ const products: Product[] = [
     subtitle: 'With Shea Butter & Almond Oil',
     price: 1299,
     imageType: 'lotion',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=pss3674dl4',
     benefits: [
       'Provides 24-hour hydration',
       'Nourishes and softens skin',
@@ -51,6 +54,7 @@ const products: Product[] = [
     subtitle: 'With Argan Oil & Vitamin E',
     price: 1499,
     imageType: 'oil',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=pst4uiokns',
     benefits: [
       'Seals in moisture',
       'Enhances natural radiance',
@@ -103,30 +107,45 @@ const Bundle: React.FC = () => {
         <div className="bundle-content">
           <div className="bundle-products">
             <div className="products-display">
-              {products.map((product) => (
-                <div key={product.id} className="product-display">
-                  <div className="product-image">
-                    {product.imageType === 'oil' && (
-                      <div className="bottle oil">
-                        <div className="bottle-body"></div>
-                        <div className="bottle-neck"></div>
-                      </div>
-                    )}
-                    {product.imageType === 'lotion' && (
-                      <div className="bottle lotion">
-                        <div className="bottle-body"></div>
-                        <div className="bottle-neck"></div>
-                      </div>
-                    )}
-                    {product.imageType === 'scrub' && (
-                      <div className="jar">
-                        <div className="jar-body"></div>
-                        <div className="jar-lid"></div>
-                      </div>
-                    )}
-                  </div>
+              <div className="product-display">
+                <div className="product-image">
+                  <iframe
+                    src={products[0].modelUrl}
+                    title={`${products[0].name} 3D View`}
+                    width="100%"
+                    height="300"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
-              ))}
+              </div>
+              <div className="product-display">
+                <div className="product-image">
+                  <iframe
+                    src={products[1].modelUrl}
+                    title={`${products[1].name} 3D View`}
+                    width="100%"
+                    height="300"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+              <div className="product-display">
+                <div className="product-image">
+                  <iframe
+                    src={products[2].modelUrl}
+                    title={`${products[2].name} 3D View`}
+                    width="100%"
+                    height="300"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="bundle-pricing">
@@ -174,7 +193,7 @@ const Bundle: React.FC = () => {
               <div className="steps">
                 <div className="step">
                   <h3>Step 1: Exfoliate</h3>
-                  <Link to="/product/haven-muse" className="product-link">
+                  <Link to={`/product/${products[0].id}`} className="product-link">
                     <h4>Haven Muse Body Scrub</h4>
                   </Link>
                   <ul>
@@ -186,7 +205,7 @@ const Bundle: React.FC = () => {
 
                 <div className="step">
                   <h3>Step 2: Moisturize</h3>
-                  <Link to="/product/haven-bliss" className="product-link">
+                  <Link to={`/product/${products[1].id}`} className="product-link">
                     <h4>Haven Bliss Body Lotion</h4>
                   </Link>
                   <ul>
@@ -198,7 +217,7 @@ const Bundle: React.FC = () => {
 
                 <div className="step">
                   <h3>Step 3: Nourish</h3>
-                  <Link to="/product/haven-glow" className="product-link">
+                  <Link to={`/product/${products[2].id}`} className="product-link">
                     <h4>Haven Glow Body Oil</h4>
                   </Link>
                   <ul>

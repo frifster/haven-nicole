@@ -1,48 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { Product, getBundlePrice, getProductList, getTotalPrice } from '../data/products';
 import './Shop.css';
-
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  subtitle: string;
-  price: number;
-  imageType: string;
-}
-
-const products: Product[] = [
-  {
-    id: 'haven-glow',
-    name: 'Haven Glow',
-    description: 'Nourishing Body Oil',
-    subtitle: 'With Argan Oil & Vitamin E',
-    price: 1499,
-    imageType: 'oil'
-  },
-  {
-    id: 'haven-bliss',
-    name: 'Haven Bliss',
-    description: 'Moisturizing Body Lotion',
-    subtitle: 'With Shea Butter & Almond Oil',
-    price: 1299,
-    imageType: 'lotion'
-  },
-  {
-    id: 'haven-muse',
-    name: 'Haven Muse',
-    description: 'Exfoliating Body Scrub',
-    subtitle: 'With Sugar Crystals & Coconut Oil',
-    price: 999,
-    imageType: 'scrub'
-  }
-];
-
-const BUNDLE_DISCOUNT = 0.15; // 15% discount
 
 const Shop: React.FC = () => {
   const { addItem } = useCart();
+  const products = getProductList();
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-PH', {
@@ -61,8 +25,7 @@ const Shop: React.FC = () => {
   };
 
   const handleAddBundle = () => {
-    const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
-    const discountedPrice = totalPrice * (1 - BUNDLE_DISCOUNT);
+    const discountedPrice = getBundlePrice();
     
     // Add bundle as a single item with discounted price
     addItem({
@@ -84,24 +47,15 @@ const Shop: React.FC = () => {
             <div key={product.id} className="product-card">
               <Link to={`/product/${product.id}`} className="product-link">
                 <div className="product-image">
-                  {product.imageType === 'oil' && (
-                    <div className="bottle oil">
-                      <div className="bottle-body"></div>
-                      <div className="bottle-neck"></div>
-                    </div>
-                  )}
-                  {product.imageType === 'lotion' && (
-                    <div className="bottle lotion">
-                      <div className="bottle-body"></div>
-                      <div className="bottle-neck"></div>
-                    </div>
-                  )}
-                  {product.imageType === 'scrub' && (
-                    <div className="jar">
-                      <div className="jar-body"></div>
-                      <div className="jar-lid"></div>
-                    </div>
-                  )}
+                  <iframe
+                    src={product.modelUrl}
+                    title={`${product.name} 3D View`}
+                    width="100%"
+                    height="300"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               
                 <div className="product-info">
@@ -125,15 +79,26 @@ const Shop: React.FC = () => {
           <h2>Self-Love Body Care Set</h2>
           <p>Experience the complete Haven ritual and save 15%</p>
           <div className="bundle-content">
+            <div className="bundle-image">
+              <iframe
+                src="https://www.pacdora.com/share?filter_url=ps3ebanpwh"
+                title="Haven Bundle 3D View"
+                width="100%"
+                height="400"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
             <div className="bundle-products">
               <ul>
-                <li>Haven Glow - Nourishing Body Oil</li>
-                <li>Haven Bliss - Moisturizing Body Lotion</li>
-                <li>Haven Muse - Exfoliating Body Scrub</li>
+                {products.map(product => (
+                  <li key={product.id}>{product.name} - {product.description}</li>
+                ))}
               </ul>
               <div className="bundle-pricing">
-                <p className="original-price">Total: {formatPrice(products.reduce((sum, product) => sum + product.price, 0))}</p>
-                <p className="bundle-price">Bundle Price: {formatPrice(products.reduce((sum, product) => sum + product.price, 0) * (1 - BUNDLE_DISCOUNT))}</p>
+                <p className="original-price">Total: {formatPrice(getTotalPrice())}</p>
+                <p className="bundle-price">{formatPrice(getBundlePrice())}</p>
               </div>
               <button 
                 className="button button-primary"

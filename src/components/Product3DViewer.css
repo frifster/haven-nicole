@@ -1,0 +1,30 @@
+.product-3d-viewer {
+  width: 100%;
+  height: 500px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color);
+  margin-bottom: 1rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-3d-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: var(--background-color);
+}
+
+@media (max-width: 768px) {
+  .product-3d-viewer {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-3d-viewer {
+    height: 300px;
+  }
+} 
