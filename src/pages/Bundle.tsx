@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import './Bundle.css';
 
 interface Product {
@@ -61,6 +62,8 @@ const products: Product[] = [
 ];
 
 const Bundle: React.FC = () => {
+  const { addItem } = useCart();
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-PH', {
       style: 'currency',
@@ -71,6 +74,15 @@ const Bundle: React.FC = () => {
   const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
   const discountedPrice = totalPrice * 0.85; // 15% discount
   const savings = totalPrice - discountedPrice;
+
+  const handleAddBundle = () => {
+    addItem({
+      id: 'bundle',
+      name: 'Self-Love Body Care Set',
+      price: discountedPrice,
+      imageType: 'bundle'
+    });
+  };
 
   return (
     <div className="bundle-page">
@@ -115,7 +127,12 @@ const Bundle: React.FC = () => {
                 <p className="bundle-price">Bundle Price: {formatPrice(discountedPrice)}</p>
                 <p className="savings">You Save: {formatPrice(savings)}</p>
               </div>
-              <button className="button button-primary">Add Bundle to Cart</button>
+              <button 
+                className="button button-primary"
+                onClick={handleAddBundle}
+              >
+                Add Bundle to Cart
+              </button>
             </div>
           </div>
 
@@ -144,7 +161,7 @@ const Bundle: React.FC = () => {
               </div>
             </div>
 
-            <div className="how-it-works">
+            <div className="ritual-section">
               <h2>The Perfect Ritual</h2>
               <div className="steps">
                 <div className="step">

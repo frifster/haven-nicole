@@ -25,20 +25,20 @@ const products: Record<string, ProductData> = {
     price: 1499,
     size: '200ml',
     benefits: [
-      'Deep nourishment and hydration',
-      'Improves skin elasticity',
-      'Enhances natural glow',
-      'Non-greasy formula',
-      'Quick absorption'
+      'Seals in moisture',
+      'Enhances natural radiance',
+      'Provides lasting nourishment',
+      'Improves skin tone',
+      'Adds healthy sheen'
     ],
     ingredients: [
       'Argan Oil',
       'Vitamin E',
-      'Sweet Almond Oil',
       'Jojoba Oil',
+      'Sweet Almond Oil',
       'Natural Fragrance'
     ],
-    usage: 'Apply generously to damp skin after bathing. Massage in circular motions until fully absorbed. For best results, use daily.',
+    usage: 'Apply to damp skin after bathing. Massage in upward motions until fully absorbed.',
     imageType: 'oil'
   },
   'haven-bliss': {
@@ -49,20 +49,20 @@ const products: Record<string, ProductData> = {
     price: 1299,
     size: '250ml',
     benefits: [
-      '24-hour hydration',
-      'Smooths and softens skin',
-      'Improves skin texture',
-      'Fast-absorbing formula',
-      'Non-sticky finish'
+      'Provides 24-hour hydration',
+      'Nourishes and softens skin',
+      'Locks in moisture',
+      'Improves skin elasticity',
+      'Creates protective barrier'
     ],
     ingredients: [
       'Shea Butter',
       'Sweet Almond Oil',
-      'Glycerin',
       'Vitamin E',
+      'Glycerin',
       'Natural Fragrance'
     ],
-    usage: 'Apply liberally to clean skin. Massage until fully absorbed. Can be used morning and night for optimal results.',
+    usage: 'Apply generously all over body after bathing or whenever skin feels dry.',
     imageType: 'lotion'
   },
   'haven-muse': {
@@ -100,15 +100,15 @@ const formatPrice = (price: number) => {
 
 const Product: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
-  const product = products[productId || ''];
   const { addItem } = useCart();
+  const product = productId ? products[productId] : null;
 
   if (!product) {
     return (
-      <div className="product-not-found">
+      <div className="product-error">
         <h1>Product Not Found</h1>
-        <p>The product you're looking for doesn't exist.</p>
-        <Link to="/shop" className="button button-primary">Return to Shop</Link>
+        <p>The product you are looking for does not exist.</p>
+        <Link to="/shop" className="button">Return to Shop</Link>
       </div>
     );
   }
@@ -121,6 +121,12 @@ const Product: React.FC = () => {
       imageType: product.imageType
     });
   };
+
+  const isLastProduct = productId === 'haven-glow';
+  const nextProduct = {
+    'haven-muse': 'haven-bliss',
+    'haven-bliss': 'haven-glow'
+  }[productId as string];
 
   return (
     <div className="product-page">
@@ -160,6 +166,15 @@ const Product: React.FC = () => {
             >
               Add to Cart
             </button>
+
+            {!isLastProduct && (
+              <div className="next-product">
+                <p>Complete your ritual with:</p>
+                <Link to={`/product/${nextProduct}`} className="button button-text">
+                  Next Product →
+                </Link>
+              </div>
+            )}
 
             <div className="product-info">
               <div className="info-section">

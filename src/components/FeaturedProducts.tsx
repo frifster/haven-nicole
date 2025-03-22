@@ -54,38 +54,39 @@ const FeaturedProducts: React.FC = () => {
         
         <div className="products-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-card">
-              <Link to={`/product/${product.id}`} className="product-link">
-                <div className="product-image">
-                  {product.imageType === 'oil' && (
-                    <div className="bottle oil">
-                      <div className="bottle-body"></div>
-                      <div className="bottle-neck"></div>
-                    </div>
-                  )}
-                  {product.imageType === 'lotion' && (
-                    <div className="bottle lotion">
-                      <div className="bottle-body"></div>
-                      <div className="bottle-neck"></div>
-                    </div>
-                  )}
-                  {product.imageType === 'scrub' && (
-                    <div className="jar">
-                      <div className="jar-body"></div>
-                      <div className="jar-lid"></div>
-                    </div>
-                  )}
-                </div>
-                
-                <div className="product-info">
-                  <h3>{product.name}</h3>
-                  <p className="description">{product.description}</p>
-                  <p className="subtitle">{product.subtitle}</p>
-                  <p className="price">{formatPrice(product.price)}</p>
-                </div>
-              </Link>
-              <button className="button button-primary">Add to Cart</button>
-            </div>
+            <Link 
+              key={product.id} 
+              to={`/product/${product.id}`} 
+              className="product-card"
+            >
+              <div className="product-image">
+                {product.imageType === 'oil' && (
+                  <div className="bottle oil">
+                    <div className="bottle-body"></div>
+                    <div className="bottle-neck"></div>
+                  </div>
+                )}
+                {product.imageType === 'lotion' && (
+                  <div className="bottle lotion">
+                    <div className="bottle-body"></div>
+                    <div className="bottle-neck"></div>
+                  </div>
+                )}
+                {product.imageType === 'scrub' && (
+                  <div className="jar">
+                    <div className="jar-body"></div>
+                    <div className="jar-lid"></div>
+                  </div>
+                )}
+              </div>
+              
+              <div className="product-info">
+                <h3>{product.name}</h3>
+                <p className="description">{product.description}</p>
+                <p className="subtitle">{product.subtitle}</p>
+                <p className="price">{formatPrice(product.price)}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

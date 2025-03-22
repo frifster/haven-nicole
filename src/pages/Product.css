@@ -24,6 +24,10 @@
   transform: scale(2);
 }
 
+.product-details {
+  padding: 20px 0;
+}
+
 .product-details h1 {
   font-family: serif;
   font-size: 42px;
@@ -46,7 +50,7 @@
 .size {
   font-size: 16px;
   color: var(--text-light);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .price {
@@ -58,22 +62,51 @@
 
 .button {
   width: 100%;
-  margin-bottom: 40px;
-}
-
-.product-info {
-  border-top: 1px solid rgba(139, 66, 151, 0.1);
-  padding-top: 40px;
-}
-
-.info-section {
   margin-bottom: 30px;
 }
 
-.info-section h3 {
-  font-size: 20px;
+.button-text {
+  background: none;
+  border: none;
   color: var(--primary-color);
-  margin-bottom: 15px;
+  padding: 0;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+}
+
+.button-text:hover {
+  color: var(--accent-color);
+}
+
+.next-product {
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(247, 198, 208, 0.1), rgba(217, 168, 224, 0.05));
+  border-radius: 10px;
+}
+
+.next-product p {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.product-info {
+  margin-top: 60px;
+}
+
+.info-section {
+  margin-bottom: 40px;
+}
+
+.info-section h3 {
+  font-family: serif;
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
 }
 
 .info-section ul {
@@ -102,23 +135,19 @@
   line-height: 1.6;
 }
 
-.product-not-found {
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.product-error {
   text-align: center;
-  padding: 40px;
+  padding: 120px 0;
 }
 
-.product-not-found h1 {
-  font-size: 32px;
+.product-error h1 {
+  font-family: serif;
+  font-size: 36px;
   color: var(--primary-color);
   margin-bottom: 20px;
 }
 
-.product-not-found p {
+.product-error p {
   font-size: 18px;
   color: var(--text-light);
   margin-bottom: 30px;
@@ -126,34 +155,41 @@
 
 @media (max-width: 1024px) {
   .product-content {
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .product-image {
-    padding: 40px;
     min-height: 400px;
   }
 
-  .product-details h1 {
-    font-size: 36px;
+  .product-image .bottle,
+  .product-image .jar {
+    transform: scale(1.5);
   }
 }
 
 @media (max-width: 768px) {
-  .product-content {
-    grid-template-columns: 1fr;
+  .product-page {
+    padding: 100px 0 60px;
+  }
+
+  .product-details h1 {
+    font-size: 32px;
+  }
+
+  .product-details h2 {
+    font-size: 20px;
   }
 
   .product-image {
-    min-height: 350px;
+    min-height: 300px;
+    padding: 40px;
   }
 
-  .product-details {
-    text-align: center;
-  }
-
-  .info-section {
-    text-align: left;
+  .product-image .bottle,
+  .product-image .jar {
+    transform: scale(1.2);
   }
 }
 
