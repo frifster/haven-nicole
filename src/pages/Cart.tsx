@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './Cart.css';
 
 const Cart: React.FC = () => {
   const { items, removeItem, updateQuantity, getTotal, getItemCount } = useCart();
+  const navigate = useNavigate();
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-PH', {
@@ -126,7 +127,10 @@ const Cart: React.FC = () => {
                 <span>{formatPrice(getTotal())}</span>
               </div>
             </div>
-            <button className="button button-primary checkout-btn">
+            <button 
+              className="button button-primary checkout-btn"
+              onClick={() => navigate('/checkout')}
+            >
               Proceed to Checkout
             </button>
             <Link to="/shop" className="continue-shopping">

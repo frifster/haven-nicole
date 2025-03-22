@@ -1,0 +1,224 @@
+.order-confirmation-page {
+  padding: 3rem 0;
+  min-height: calc(100vh - 80px);
+  background-color: #f9f9f9;
+}
+
+.order-confirmation-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.order-confirmation-page .confirmation-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-confirmation-page .success-message {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.order-confirmation-page .success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.order-confirmation-page .success-message h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.order-confirmation-page .success-message p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.order-confirmation-page .order-number,
+.order-confirmation-page .order-date {
+  font-weight: 500;
+  color: #333;
+}
+
+.order-confirmation-page .order-details {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.order-confirmation-page .order-details h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-confirmation-page .items-list {
+  margin-bottom: 1.5rem;
+}
+
+.order-confirmation-page .order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-confirmation-page .order-item:last-child {
+  border-bottom: none;
+}
+
+.order-confirmation-page .item-name {
+  flex: 2;
+  color: #333;
+}
+
+.order-confirmation-page .item-quantity {
+  flex: 1;
+  text-align: center;
+  color: #666;
+}
+
+.order-confirmation-page .item-price {
+  flex: 1;
+  text-align: right;
+  color: #333;
+  font-weight: 500;
+}
+
+.order-confirmation-page .order-totals {
+  border-top: 2px solid #eee;
+  padding-top: 1rem;
+}
+
+.order-confirmation-page .total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.order-confirmation-page .total-row.final {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.order-confirmation-page .shipping-details {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.order-confirmation-page .shipping-details h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.order-confirmation-page .shipping-info {
+  color: #666;
+}
+
+.order-confirmation-page .shipping-info p {
+  margin-bottom: 0.5rem;
+}
+
+.order-confirmation-page .next-steps {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.order-confirmation-page .next-steps h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.order-confirmation-page .next-steps p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.order-confirmation-page .action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.order-confirmation-page .button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.order-confirmation-page .button-primary {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.order-confirmation-page .button-primary:hover {
+  background-color: #357abd;
+}
+
+.order-confirmation-page .button-secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.order-confirmation-page .button-secondary:hover {
+  background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .order-confirmation-page {
+    padding: 2rem 0;
+  }
+
+  .order-confirmation-page .confirmation-content {
+    padding: 1.5rem;
+  }
+
+  .order-confirmation-page .success-message {
+    padding: 1.5rem;
+  }
+
+  .order-confirmation-page .success-message h1 {
+    font-size: 1.75rem;
+  }
+
+  .order-confirmation-page .action-buttons {
+    flex-direction: column;
+  }
+
+  .order-confirmation-page .button {
+    width: 100%;
+    text-align: center;
+  }
+} 

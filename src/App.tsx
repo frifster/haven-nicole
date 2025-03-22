@@ -10,9 +10,11 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Bundle from './pages/Bundle';
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
+import OrderConfirmation from './pages/OrderConfirmation';
 import Product from './pages/Product';
 import Shop from './pages/Shop';
 
@@ -35,6 +37,8 @@ const App: React.FC = () => {
               <Route path="/blog/:postId" element={<BlogPost />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/order-confirmation" element={<OrderConfirmation />} />
             </Routes>
           </main>
           <Footer />
