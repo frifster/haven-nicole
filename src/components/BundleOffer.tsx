@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BundleOffer.css';
 
 const BundleOffer: React.FC = () => {
@@ -33,7 +34,7 @@ const BundleOffer: React.FC = () => {
               </ul>
             </div>
           </div>
-          <button className="button button-primary">Shop Bundle</button>
+          <Link to="/bundle" className="button button-primary">Shop Bundle</Link>
         </div>
       </div>
     </section>
