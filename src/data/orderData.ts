@@ -48,5 +48,5 @@ export const dummyShippingDetails: ShippingDetails = {
 };
 
 export const generateOrderNumber = () => {
-  return 'ORD-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+  return 'ORD-' + Math.random().toString(36).substring(2, 11).toUpperCase();
 }; 
