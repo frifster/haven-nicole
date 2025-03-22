@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext, useState } from 'react';
+import React, { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
 interface CartItem {
   id: string;
@@ -6,6 +6,8 @@ interface CartItem {
   price: number;
   quantity: number;
   imageType: string;
+  isBundle?: boolean;
+  bundleItems?: CartItem[];
 }
 
 interface CartContextType {
@@ -21,14 +23,25 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [items, setItems] = useState<CartItem[]>([]);
+  const [items, setItems] = useState<CartItem[]>(() => {
+    // Initialize cart from localStorage if available
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(items));
+  }, [items]);
 
   const addItem = (item: Omit<CartItem, 'quantity'>) => {
     setItems(currentItems => {
       const existingItem = currentItems.find(i => i.id === item.id);
       if (existingItem) {
         return currentItems.map(i =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+          i.id === item.id
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
         );
       }
       return [...currentItems, { ...item, quantity: 1 }];
@@ -53,7 +66,12 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const getTotal = () => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return items.reduce((total, item) => {
+      if (item.isBundle) {
+        return total + (item.price * item.quantity);
+      }
+      return total + (item.price * item.quantity);
+    }, 0);
   };
 
   const getItemCount = () => {

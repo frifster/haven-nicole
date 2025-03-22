@@ -80,7 +80,15 @@ const Bundle: React.FC = () => {
       id: 'bundle',
       name: 'Self-Love Body Care Set',
       price: discountedPrice,
-      imageType: 'bundle'
+      imageType: 'bundle',
+      isBundle: true,
+      bundleItems: products.map(product => ({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: 1,
+        imageType: product.imageType
+      }))
     });
   };
 
