@@ -1,4 +1,3 @@
-import React from 'react';
 import './Product3DViewer.css';
 
 function Product3DViewer({ modelUrl }: { modelUrl: string }) {
