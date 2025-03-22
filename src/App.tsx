@@ -4,6 +4,8 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import About from './pages/About';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Bundle from './pages/Bundle';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
@@ -23,6 +25,8 @@ const App: React.FC = () => {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/bundle" element={<Bundle />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:postId" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

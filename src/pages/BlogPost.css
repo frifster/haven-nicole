@@ -1,0 +1,283 @@
+.blog-post-page {
+  padding: 80px 0;
+}
+
+.blog-post-hero {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  /* Darker default gradient background */
+  background-image: linear-gradient(135deg, 
+    rgba(83, 56, 71, 0.95),
+    rgba(70, 45, 82, 0.95)
+  );
+}
+
+.blog-post-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.blog-post-hero.ritual {
+  background-image: linear-gradient(135deg,
+    rgba(83, 56, 71, 0.95),
+    rgba(70, 45, 82, 0.95)
+  ), url('/images/ritual.jpg');
+}
+
+.blog-post-hero.ingredients {
+  background-image: linear-gradient(135deg,
+    rgba(71, 56, 83, 0.95),
+    rgba(45, 70, 82, 0.95)
+  ), url('/images/ingredients.jpg');
+}
+
+.blog-post-hero.tips {
+  background-image: linear-gradient(135deg,
+    rgba(83, 71, 56, 0.95),
+    rgba(83, 56, 71, 0.95)
+  ), url('/images/tips.jpg');
+}
+
+.blog-post-hero.science {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.95),
+    rgba(71, 83, 56, 0.95)
+  ), url('/images/science.jpg');
+}
+
+.blog-post-hero.wellness {
+  background-image: linear-gradient(135deg,
+    rgba(71, 83, 71, 0.95),
+    rgba(83, 71, 56, 0.95)
+  ), url('/images/wellness.jpg');
+}
+
+.blog-post-hero.sustainability {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.95),
+    rgba(71, 83, 56, 0.95)
+  ), url('/images/sustainability.jpg');
+}
+
+.blog-post-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 60px;
+  color: white;
+  z-index: 2; /* Ensure content stays above the overlay */
+}
+
+.blog-post-hero-content h1 {
+  font-family: serif;
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.blog-post-hero-content .post-category {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.blog-post-hero-content .post-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.blog-post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.blog-post-content .intro {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+.content-section h2 {
+  font-family: serif;
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.blog-post-content .conclusion {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(247, 198, 208, 0.2), rgba(217, 168, 224, 0.1));
+  border-radius: 10px;
+}
+
+.blog-post-footer {
+  max-width: 800px;
+  margin: 60px auto 0;
+  padding: 40px 20px;
+  border-top: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.share-button {
+  background: none;
+  border: 1px solid var(--accent-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.blog-post-error {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.blog-post-error h1 {
+  font-family: serif;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.blog-post-error p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+/* Blog grid card images */
+.blog-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  /* Darker default gradient background */
+  background-image: linear-gradient(135deg,
+    rgba(83, 56, 71, 0.95),
+    rgba(70, 45, 82, 0.95)
+  );
+}
+
+.blog-image.ritual {
+  background-image: linear-gradient(135deg,
+    rgba(83, 56, 71, 0.95),
+    rgba(70, 45, 82, 0.95)
+  ), url('/images/ritual.jpg');
+}
+
+.blog-image.ingredients {
+  background-image: linear-gradient(135deg,
+    rgba(71, 56, 83, 0.95),
+    rgba(45, 70, 82, 0.95)
+  ), url('/images/ingredients.jpg');
+}
+
+.blog-image.tips {
+  background-image: linear-gradient(135deg,
+    rgba(83, 71, 56, 0.95),
+    rgba(83, 56, 71, 0.95)
+  ), url('/images/tips.jpg');
+}
+
+.blog-image.science {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.95),
+    rgba(71, 83, 56, 0.95)
+  ), url('/images/science.jpg');
+}
+
+.blog-image.wellness {
+  background-image: linear-gradient(135deg,
+    rgba(71, 83, 71, 0.95),
+    rgba(83, 71, 56, 0.95)
+  ), url('/images/wellness.jpg');
+}
+
+.blog-image.sustainability {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.95),
+    rgba(71, 83, 56, 0.95)
+  ), url('/images/sustainability.jpg');
+}
+
+@media (max-width: 768px) {
+  .blog-post-hero {
+    height: 300px;
+  }
+
+  .blog-post-hero-content {
+    padding: 40px 20px;
+  }
+
+  .blog-post-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .blog-post-content .intro,
+  .blog-post-content .conclusion {
+    font-size: 18px;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+  }
+
+  .content-section p {
+    font-size: 16px;
+  }
+
+  .blog-post-footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .share-buttons {
+    justify-content: center;
+  }
+} 
