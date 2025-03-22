@@ -12,10 +12,8 @@ const Header: React.FC = () => {
   return (
     <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="header-container">
-        <div className="logo">
-          <Link to="/" onClick={handleLinkClick}>
-            <h1>HAVEN</h1>
-          </Link>
+        <Link to="/" onClick={handleLinkClick} className="logo" draggable="false">
+          <h1>HAVEN</h1>
           <div className="butterfly-logo">
             <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
               <path d="M16 8L16 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -27,7 +25,7 @@ const Header: React.FC = () => {
               <path d="M16 8C18 4 19 6 17 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
-        </div>
+        </Link>
         
         <button 
           className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}

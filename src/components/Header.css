@@ -40,6 +40,14 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  -webkit-user-drag: none;
+}
+
+.logo * {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .logo h1 {
@@ -48,6 +56,9 @@
   color: var(--primary-color);
   font-weight: bold;
   margin: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .butterfly-logo {
@@ -96,6 +107,7 @@
 
 .nav li {
   cursor: default;
+  user-select: none;
 }
 
 .nav a {
@@ -106,6 +118,8 @@
   transition: color 0.3s ease;
   white-space: nowrap;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .nav a:hover {
