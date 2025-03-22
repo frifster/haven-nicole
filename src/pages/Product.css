@@ -1,0 +1,158 @@
+.product-page {
+  padding: 120px 0 80px;
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.product-image {
+  background: linear-gradient(135deg, rgba(247, 198, 208, 0.2), rgba(217, 168, 224, 0.1));
+  padding: 60px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+/* Product image styles */
+.bottle, .jar {
+  transform: scale(2);
+}
+
+.product-details h1 {
+  font-family: serif;
+  font-size: 42px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.product-details h2 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.size {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 32px;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.product-info {
+  border-top: 1px solid rgba(139, 66, 151, 0.1);
+  padding-top: 40px;
+}
+
+.info-section {
+  margin-bottom: 30px;
+}
+
+.info-section h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.info-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.info-section p {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.product-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.product-not-found h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.product-not-found p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .product-content {
+    gap: 40px;
+  }
+
+  .product-image {
+    padding: 40px;
+    min-height: 400px;
+  }
+
+  .product-details h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-content {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    min-height: 350px;
+  }
+
+  .product-details {
+    text-align: center;
+  }
+
+  .info-section {
+    text-align: left;
+  }
+} 

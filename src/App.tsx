@@ -4,8 +4,10 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import About from './pages/About';
+import Bundle from './pages/Bundle';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
+import Product from './pages/Product';
 import Shop from './pages/Shop';
 
 const App: React.FC = () => {
@@ -19,6 +21,8 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/product/:productId" element={<Product />} />
+            <Route path="/bundle" element={<Bundle />} />
           </Routes>
         </main>
         <Footer />

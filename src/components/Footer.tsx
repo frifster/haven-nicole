@@ -1,37 +1,65 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 interface FooterColumn {
   title: string;
-  links: string[];
+  links: Array<{
+    text: string;
+    to: string;
+  }>;
 }
 
 const footerColumns: FooterColumn[] = [
   {
     title: 'Shop',
-    links: ['Haven Glow', 'Haven Bliss', 'Haven Muse', 'Self-Love Body Care Set']
+    links: [
+      { text: 'Haven Glow', to: '/product/haven-glow' },
+      { text: 'Haven Bliss', to: '/product/haven-bliss' },
+      { text: 'Haven Muse', to: '/product/haven-muse' },
+      { text: 'Self-Love Body Care Set', to: '/bundle' }
+    ]
   },
   {
     title: 'About',
-    links: ['Our Story', 'Our Philosophy', 'Blog', 'Contact Us']
+    links: [
+      { text: 'Our Story', to: '/about' },
+      { text: 'Our Philosophy', to: '/about#philosophy' },
+      { text: 'Blog', to: '/blog' },
+      { text: 'Contact Us', to: '/contact' }
+    ]
   },
   {
     title: 'Help',
-    links: ['FAQs', 'Shipping & Returns', 'Privacy Policy', 'Terms of Service']
+    links: [
+      { text: 'FAQs', to: '/how-it-works#faqs' },
+      { text: 'Shipping & Returns', to: '/shipping' },
+      { text: 'Privacy Policy', to: '/privacy' },
+      { text: 'Terms of Service', to: '/terms' }
+    ]
   },
   {
     title: 'Follow Us',
-    links: ['Instagram', 'Pinterest', 'TikTok', 'Facebook']
+    links: [
+      { text: 'Instagram', to: 'https://instagram.com' },
+      { text: 'Pinterest', to: 'https://pinterest.com' },
+      { text: 'TikTok', to: 'https://tiktok.com' },
+      { text: 'Facebook', to: 'https://facebook.com' }
+    ]
   }
 ];
 
 const Footer: React.FC = () => {
+  const isExternalLink = (url: string) => url.startsWith('http');
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h2>HAVEN</h2>
+            <Link to="/">
+              <h2>HAVEN</h2>
+            </Link>
             <p>"A scent to remember, a self-care moment to cherish."</p>
           </div>
           
@@ -42,7 +70,13 @@ const Footer: React.FC = () => {
                 <ul>
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
+                      {isExternalLink(link.to) ? (
+                        <a href={link.to} target="_blank" rel="noopener noreferrer">
+                          {link.text}
+                        </a>
+                      ) : (
+                        <Link to={link.to}>{link.text}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>

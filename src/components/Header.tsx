@@ -5,11 +5,15 @@ import './Header.css';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="header">
+    <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="header-container">
         <div className="logo">
-          <Link to="/">
+          <Link to="/" onClick={handleLinkClick}>
             <h1>HAVEN</h1>
           </Link>
           <div className="fairy-silhouette">
@@ -21,7 +25,7 @@ const Header: React.FC = () => {
         </div>
         
         <button 
-          className="mobile-menu-btn"
+          className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -32,12 +36,12 @@ const Header: React.FC = () => {
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/shop">Shop</Link></li>
-            <li><Link to="/how-it-works">How It Works</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+            <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
+            <li><Link to="/shop" onClick={handleLinkClick}>Shop</Link></li>
+            <li><Link to="/how-it-works" onClick={handleLinkClick}>How It Works</Link></li>
+            <li><Link to="/blog" onClick={handleLinkClick}>Blog</Link></li>
+            <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
           </ul>
         </nav>
 
