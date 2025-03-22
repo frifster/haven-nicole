@@ -1,12 +1,13 @@
 .features {
   padding: 80px 0;
+  background-color: rgba(139, 66, 151, 0.05);
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .feature-item {
@@ -18,41 +19,64 @@
 .feature-icon {
   width: 48px;
   height: 48px;
-  background-color: rgba(139, 66, 151, 0.1);
-  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background: rgba(139, 66, 151, 0.1);
+  border-radius: 50%;
+  padding: 12px;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
 .feature-icon svg {
   width: 24px;
   height: 24px;
-  color: var(--primary-color);
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+  background: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.feature-item:hover .feature-icon svg {
+  color: white;
+  transform: scale(1.1);
 }
 
 .feature-content h3 {
-  font-size: 20px;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .feature-content p {
-  font-size: 16px;
   color: var(--text-light);
+  font-size: 16px;
   line-height: 1.6;
 }
 
 @media (max-width: 768px) {
+  .features {
+    padding: 60px 0;
+  }
+
   .features-grid {
-    grid-template-columns: 1fr;
     gap: 30px;
+    margin-top: 40px;
+  }
+
+  .feature-item {
+    gap: 15px;
   }
 
   .feature-icon {
     width: 40px;
     height: 40px;
+    padding: 10px;
   }
 
   .feature-icon svg {
@@ -62,9 +86,10 @@
 
   .feature-content h3 {
     font-size: 18px;
+    margin-bottom: 6px;
   }
 
   .feature-content p {
-    font-size: 15px;
+    font-size: 14px;
   }
 } 
