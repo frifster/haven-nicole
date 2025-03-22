@@ -1,0 +1,302 @@
+.contact-page {
+  padding: 120px 0 80px;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-hero h1 {
+  font-family: serif;
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 20px;
+  color: var(--text-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-family: serif;
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.info-item {
+  margin-bottom: 30px;
+}
+
+.info-item h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--primary-color);
+  transition: border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.faq-section {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid var(--accent-color);
+}
+
+.faq-section h2 {
+  font-family: serif;
+  font-size: 32px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--primary-color);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.toggle-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 20px 20px;
+}
+
+.faq-answer p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+button.button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-top: 20px;
+}
+
+button.button:hover {
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 80px 0 40px;
+  }
+
+  .contact-hero {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .contact-hero h1 {
+    font-size: 36px;
+  }
+
+  .contact-hero p {
+    font-size: 18px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .info-item {
+    margin-bottom: 25px;
+  }
+
+  .info-item h3 {
+    font-size: 18px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .faq-section {
+    margin-top: 40px;
+    padding: 40px 20px 0;
+  }
+
+  .faq-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .faq-question h3 {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+
+  .faq-answer p {
+    font-size: 15px;
+  }
+
+  .button {
+    padding: 12px 25px;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 60px 0 30px;
+  }
+
+  .contact-hero h1 {
+    font-size: 32px;
+  }
+
+  .contact-hero p {
+    font-size: 16px;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 24px;
+  }
+
+  .faq-question {
+    padding: 15px;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 15px 15px;
+  }
+} 
