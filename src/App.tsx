@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Product from './pages/Product';
+import ShippingAndReturns from './pages/ShippingAndReturns';
 import Shop from './pages/Shop';
 
 const App: React.FC = () => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/order-confirmation" element={<OrderConfirmation />} />
+              <Route path="/shipping-and-returns" element={<ShippingAndReturns />} />
             </Routes>
           </main>
           <Footer />

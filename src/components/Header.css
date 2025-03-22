@@ -1,6 +1,6 @@
 .header {
   background: linear-gradient(to bottom, rgba(247, 198, 208, 0.3), rgba(255, 248, 240, 0));
-  padding: 20px 0;
+  padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,11 +38,14 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  user-select: none;
   text-decoration: none;
-  -webkit-user-drag: none;
+  color: var(--primary-color);
+  gap: 8px;
+}
+
+.logo-image {
+  width: 140px;
+  object-fit: contain;
 }
 
 .logo * {
