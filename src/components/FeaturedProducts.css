@@ -1,0 +1,141 @@
+.featured-products {
+  padding: 80px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(139, 66, 151, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+/* Bottle styles */
+.bottle {
+  position: relative;
+}
+
+.bottle-body {
+  width: 60px;
+  height: 140px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.bottle.oil .bottle-body {
+  border-radius: 5px;
+}
+
+.bottle.lotion .bottle-body {
+  border-radius: 30px;
+}
+
+.bottle-neck {
+  width: 30px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  opacity: 0.7;
+}
+
+/* Jar styles */
+.jar {
+  position: relative;
+}
+
+.jar-body {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.jar-lid {
+  width: 80px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  opacity: 0.7;
+}
+
+.product-info {
+  padding: 0 20px;
+}
+
+.product-info h3 {
+  font-family: serif;
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.product-info .description {
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.product-info .subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.product-info .price {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-info .button {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-image {
+    height: 200px;
+  }
+} 

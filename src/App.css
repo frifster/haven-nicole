@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #8B4297;
+  --secondary-color: #F7C6D0;
+  --accent-color: #D9A8E0;
+  --background-color: #FFF8F0;
+  --text-color: #8B4297;
+  --text-light: rgba(139, 66, 151, 0.7);
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-width: 100vw;
+  cursor: default;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  user-select: text;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 40px;
+  max-width: 100vw;
+}
+
+.section-title {
+  font-family: serif;
+  font-size: 42px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: #7a357f;
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.button-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  cursor: text;
+}
+
+a, button {
+  cursor: pointer;
+}

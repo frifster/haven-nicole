@@ -1,0 +1,233 @@
+.how-it-works {
+  padding-top: 80px;
+}
+
+.how-it-works-hero {
+  background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.how-it-works-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+.how-it-works-hero p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.ritual-steps {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.ritual-steps h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.steps-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--background-color);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.steps-navigation {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.step-button {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.step-button.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.step-content {
+  padding: 20px;
+}
+
+.step-content h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+.step-content p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.tips {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.tips h4 {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: serif;
+}
+
+.tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tips li {
+  color: var(--text-light);
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.tips li::before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.faqs {
+  padding: 80px 0;
+  background: var(--background-color);
+}
+
+.faqs h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: serif;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.faq-question.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.faq-question .icon {
+  font-size: 24px;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  background: white;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.faq-answer.active {
+  padding: 20px;
+  max-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .how-it-works-hero {
+    padding: 60px 0;
+  }
+
+  .how-it-works-hero h1 {
+    font-size: 36px;
+  }
+
+  .ritual-steps,
+  .faqs {
+    padding: 60px 0;
+  }
+
+  .steps-container {
+    padding: 20px;
+  }
+
+  .steps-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .step-button {
+    width: 100%;
+  }
+
+  .tips {
+    padding: 20px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 15px;
+  }
+} 

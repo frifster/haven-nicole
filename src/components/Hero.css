@@ -1,0 +1,112 @@
+.hero {
+  background: linear-gradient(135deg, rgba(247, 198, 208, 0.4), rgba(217, 168, 224, 0.2));
+  padding: 120px 0 60px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h2 {
+  font-family: serif;
+  font-size: 64px;
+  color: var(--primary-color);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(247, 198, 208, 0.2) 0%, rgba(247, 198, 208, 0) 70%);
+  border-radius: 50%;
+}
+
+.product-bottle {
+  position: relative;
+  z-index: 1;
+}
+
+.bottle-body {
+  width: 60px;
+  height: 120px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.bottle-neck {
+  width: 30px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  opacity: 0.9;
+}
+
+.bottle-shadow {
+  width: 80px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 40px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+} 
