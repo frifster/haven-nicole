@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../data/blogPosts';
 import './BlogPost.css';
@@ -11,10 +11,6 @@ interface Section {
 const BlogPostPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
   const post = postId ? blogPosts.find((p: BlogPost) => p.id === postId) : null;
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [postId]);
 
   if (!post) {
     return (
