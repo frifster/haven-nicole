@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Philosophy.css';
 
 const Philosophy: React.FC = () => {
@@ -17,7 +18,7 @@ const Philosophy: React.FC = () => {
               balance, relaxation, and a lasting sense of self-appreciation.
             </p>
           </div>
-          <a href="#read-more" className="read-more">Read More →</a>
+          <Link to="/blog" className="read-more">Read More →</Link>
         </div>
         <div className="philosophy-decoration">
           <div className="circle outer"></div>

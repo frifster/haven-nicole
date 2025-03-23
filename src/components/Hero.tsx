@@ -19,12 +19,6 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="hero-image">
-          <div className="product-glow"></div>
-          <div className="product-bottle">
-            <div className="bottle-body"></div>
-            <div className="bottle-neck"></div>
-            <div className="bottle-shadow"></div>
-          </div>
         </div>
       </div>
     </section>

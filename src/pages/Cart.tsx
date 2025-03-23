@@ -38,39 +38,33 @@ const Cart: React.FC = () => {
               <div key={item.id} className="cart-item">
                 <div className="item-image">
                   {item.imageType === 'oil' && (
-                    <div className="bottle oil">
-                      <div className="bottle-body"></div>
-                      <div className="bottle-neck"></div>
-                    </div>
+                    <img 
+                      src="/images/glowcart.png"
+                      alt="Haven Glow Body Oil"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
                   )}
                   {item.imageType === 'lotion' && (
-                    <div className="bottle lotion">
-                      <div className="bottle-body"></div>
-                      <div className="bottle-neck"></div>
-                    </div>
+                    <img 
+                      src="/images/blisscart.png"
+                      alt="Haven Bliss Body Lotion"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
                   )}
                   {item.imageType === 'scrub' && (
-                    <div className="jar">
-                      <div className="jar-body"></div>
-                      <div className="jar-lid"></div>
-                    </div>
+                    <img 
+                      src="/images/musecart.png"
+                      alt="Haven Muse Body Scrub"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
                   )}
                   {item.imageType === 'bundle' && (
                     <div className="bundle-image">
-                      <div className="bundle-products">
-                        <div className="bottle oil">
-                          <div className="bottle-body"></div>
-                          <div className="bottle-neck"></div>
-                        </div>
-                        <div className="bottle lotion">
-                          <div className="bottle-body"></div>
-                          <div className="bottle-neck"></div>
-                        </div>
-                        <div className="jar">
-                          <div className="jar-body"></div>
-                          <div className="jar-lid"></div>
-                        </div>
-                      </div>
+                      <img 
+                        src="/images/bundle.png"
+                        alt="Haven Self-Love Body Care Set"
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                      />
                     </div>
                   )}
                 </div>

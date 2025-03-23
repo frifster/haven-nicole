@@ -21,7 +21,7 @@ export const products: Record<string, Product> = {
     price: 1499,
     size: '200ml',
     imageType: 'oil',
-    modelUrl: 'https://www.pacdora.com/share?filter_url=pst4uiokns',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=ps4iblxfdp',
     benefits: [
       'Seals in moisture',
       'Enhances natural radiance',
@@ -46,7 +46,7 @@ export const products: Record<string, Product> = {
     price: 1299,
     size: '250ml',
     imageType: 'lotion',
-    modelUrl: 'https://www.pacdora.com/share?filter_url=pss3674dl4',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=psprxlydjb',
     benefits: [
       'Provides 24-hour hydration',
       'Nourishes and softens skin',

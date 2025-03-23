@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { generateOrderNumber, OrderItem, ShippingDetails } from '../data/orderData';
 import './OrderConfirmation.css';
 
@@ -11,7 +11,21 @@ interface OrderConfirmationState {
 
 const OrderConfirmation: React.FC = () => {
   const location = useLocation();
-  const { items, shippingDetails, total } = location.state as OrderConfirmationState;
+  const navigate = useNavigate();
+  const state = location.state as OrderConfirmationState | null;
+
+  useEffect(() => {
+    if (!state?.items || !state?.shippingDetails) {
+      navigate('/cart');
+      return;
+    }
+  }, [state, navigate]);
+
+  if (!state?.items || !state?.shippingDetails) {
+    return null;
+  }
+
+  const { items, shippingDetails, total } = state;
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-PH', {

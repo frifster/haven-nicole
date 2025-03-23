@@ -38,7 +38,7 @@ const products: Product[] = [
     subtitle: 'With Shea Butter & Almond Oil',
     price: 1299,
     imageType: 'lotion',
-    modelUrl: 'https://www.pacdora.com/share?filter_url=pss3674dl4',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=psprxlydjb',
     benefits: [
       'Provides 24-hour hydration',
       'Nourishes and softens skin',
@@ -54,7 +54,7 @@ const products: Product[] = [
     subtitle: 'With Argan Oil & Vitamin E',
     price: 1499,
     imageType: 'oil',
-    modelUrl: 'https://www.pacdora.com/share?filter_url=pst4uiokns',
+    modelUrl: 'https://www.pacdora.com/share?filter_url=ps4iblxfdp',
     benefits: [
       'Seals in moisture',
       'Enhances natural radiance',
@@ -108,41 +108,11 @@ const Bundle: React.FC = () => {
           <div className="bundle-products">
             <div className="products-display">
               <div className="product-display">
-                <div className="product-image">
-                  <iframe
-                    src={products[0].modelUrl}
-                    title={`${products[0].name} 3D View`}
-                    width="100%"
-                    height="300"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-              <div className="product-display">
-                <div className="product-image">
-                  <iframe
-                    src={products[1].modelUrl}
-                    title={`${products[1].name} 3D View`}
-                    width="100%"
-                    height="300"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-              <div className="product-display">
-                <div className="product-image">
-                  <iframe
-                    src={products[2].modelUrl}
-                    title={`${products[2].name} 3D View`}
-                    width="100%"
-                    height="300"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                <div className="product-image" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '600px' }}>
+                  <img
+                    src="/images/bundle.png"
+                    alt="Haven Self-Love Body Care Set"
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                   />
                 </div>
               </div>

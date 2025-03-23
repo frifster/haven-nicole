@@ -10,11 +10,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
+  position: relative;
 }
 
 .hero-content {
   flex: 1;
+  max-width: 50%;
 }
 
 .hero-content h2 {
@@ -38,11 +40,17 @@
 }
 
 .hero-image {
-  flex: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 60%;
+  height: 700px;
+  right: -5%;
+  background-image: url('/images/hero.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .product-glow {
@@ -98,6 +106,10 @@
     text-align: center;
   }
 
+  .hero-content {
+    max-width: 100%;
+  }
+
   .hero-content h2 {
     font-size: 48px;
   }
@@ -107,6 +119,6 @@
   }
 
   .hero-image {
-    margin-top: 40px;
+    display: none;
   }
 } 

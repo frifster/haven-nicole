@@ -80,14 +80,12 @@ const Shop: React.FC = () => {
           <p>Experience the complete Haven ritual and save 15%</p>
           <div className="bundle-content">
             <div className="bundle-image">
-              <iframe
-                src="https://www.pacdora.com/share?filter_url=ps3ebanpwh"
-                title="Haven Bundle 3D View"
+              <img
+                src="/images/bundle.png"
+                alt="Haven Self-Love Body Care Set"
                 width="100%"
                 height="400"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                style={{ objectFit: 'contain' }}
               />
             </div>
             <div className="bundle-products">

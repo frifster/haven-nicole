@@ -2,16 +2,66 @@
   padding: 60px 0;
 }
 
+.bundle-offer .bundle-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.bundle-offer .bundle-link:hover {
+  transform: translateY(-5px);
+}
+
 .bundle-offer .bundle-card {
-  background-color: rgba(139, 66, 151, 0.1);
+  background-color: white;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
   padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 900px;
   margin: 0 auto;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(139, 66, 151, 0.1);
+}
+
+.bundle-offer .bundle-link:hover .bundle-card {
+  box-shadow: 0 15px 30px rgba(139, 66, 151, 0.15);
+}
+
+.bundle-offer .discount-ribbon {
+  position: absolute;
+  top: 25px;
+  right: -50px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 50px;
+  transform: rotate(45deg);
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 200px;
+  text-align: center;
+}
+
+.bundle-offer .bundle-content {
+  text-align: center;
+}
+
+.bundle-offer .bundle-content .bundle-image {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.bundle-offer .bundle-content .bundle-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .bundle-offer .bundle-content h2 {
@@ -25,38 +75,61 @@
   font-size: 16px;
   color: var(--primary-color);
   margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bundle-offer .bundle-price {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.bundle-offer .bundle-price .price-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .bundle-offer .bundle-price .price {
-  font-size: 22px;
+  font-size: 36px;
   color: var(--primary-color);
   font-weight: bold;
+  line-height: 1;
 }
 
 .bundle-offer .bundle-price .original-price {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-light);
   text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.bundle-offer .bundle-items {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
   .bundle-offer .bundle-card {
-    flex-direction: column;
-    text-align: center;
     padding: 30px;
   }
 
-  .bundle-offer .bundle-content {
-    margin-bottom: 20px;
+  .bundle-offer .discount-ribbon {
+    padding: 6px 50px;
+    font-size: 12px;
+    right: -50px;
+    top: 20px;
+    width: 180px;
   }
 
-  .bundle-offer .bundle-price {
-    justify-content: center;
+  .bundle-offer .bundle-price .price {
+    font-size: 32px;
+  }
+
+  .bundle-offer .bundle-price .original-price {
+    font-size: 16px;
   }
 } 

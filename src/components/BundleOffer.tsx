@@ -16,26 +16,28 @@ const BundleOffer: React.FC = () => {
   return (
     <section className="bundle-offer">
       <div className="container">
-        <div className="bundle-card">
-          <div className="bundle-content">
-            <h2>Self-Love Body Care Set</h2>
-            <p>Experience the complete Haven ritual with our signature body care collection and save 15%.</p>
-            <div className="bundle-price">
-              <span className="price">{formatPrice(discountedPrice)}</span>
-              <span className="original-price">{formatPrice(totalPrice)}</span>
-              <span className="savings">Save 15%</span>
-            </div>
-            <div className="bundle-items">
-              <p>Set includes:</p>
-              <ul>
-                <li>Haven Glow - Nourishing Body Oil</li>
-                <li>Haven Bliss - Moisturizing Body Lotion</li>
-                <li>Haven Muse - Exfoliating Body Scrub</li>
-              </ul>
+        <Link to="/bundle" className="bundle-link">
+          <div className="bundle-card">
+            <div className="discount-ribbon">Save 15%</div>
+            <div className="bundle-content">
+              <div className="bundle-image">
+                <img 
+                  src="/images/bundle.png" 
+                  alt="Haven Self-Love Body Care Set"
+                  style={{ width: '100%', objectFit: 'contain' }}
+                />
+              </div>
+              <h2>Self-Love Body Care Set</h2>
+              <p>Experience the complete Haven ritual with our signature body care collection.</p>
+              <div className="bundle-price">
+                <div className="price-tag">
+                  <span className="price">{formatPrice(discountedPrice)}</span>
+                  <span className="original-price">{formatPrice(totalPrice)}</span>
+                </div>
+              </div>
             </div>
           </div>
-          <Link to="/bundle" className="button button-primary">Shop Bundle</Link>
-        </div>
+        </Link>
       </div>
     </section>
   );

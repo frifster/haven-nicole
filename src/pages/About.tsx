@@ -29,7 +29,7 @@ const About: React.FC = () => {
           </div>
           <div className="story-image">
             <img 
-              src="https://placehold.co/800x600/F7C6D0/8B4297?text=Haven+Products" 
+              src="/images/hero.png" 
               alt="Haven skincare products" 
             />
           </div>
