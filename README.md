@@ -97,5 +97,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - 3D Models powered by [Pacdora](https://www.pacdora.com)
-- Icons from [Your Icon Provider]
 - Design inspiration from modern e-commerce platforms
