@@ -201,7 +201,6 @@
 
 .product-image {
   background: linear-gradient(135deg, rgba(247, 198, 208, 0.2), rgba(217, 168, 224, 0.1));
-  padding: 60px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
