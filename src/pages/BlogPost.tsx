@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebook } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../data/blogPosts';
 import './BlogPost.css';
@@ -11,6 +12,31 @@ interface Section {
 const BlogPostPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
   const post = postId ? blogPosts.find((p: BlogPost) => p.id === postId) : null;
+
+  const handleFacebookShare = () => {
+    if (!post) return;
+    
+    // Construct share content
+    const shareUrl = new URL('https://www.facebook.com/sharer/sharer.php');
+    const currentUrl = `${window.location.origin}/blog/${post.id}`;
+    const quote = `${post.title}\n\n${post.excerpt}`;
+    
+    shareUrl.searchParams.append('u', currentUrl);
+    shareUrl.searchParams.append('quote', quote);
+    shareUrl.searchParams.append('hashtag', '#HavenBodyCare');
+
+    // Open share dialog in a centered popup window
+    const width = 626;
+    const height = 436;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+
+    window.open(
+      shareUrl.toString(),
+      'FacebookShare',
+      `width=${width},height=${height},left=${left},top=${top},scrollbars=yes`
+    );
+  };
 
   if (!post) {
     return (
@@ -54,7 +80,9 @@ const BlogPostPage: React.FC = () => {
         <div className="blog-post-footer">
           <Link to="/blog" className="button secondary">← Back to Blog</Link>
           <div className="share-buttons">
-            <button className="share-button">Share on Facebook</button>
+            <button className="share-button facebook" onClick={handleFacebookShare}>
+              <FaFacebook /> Share
+            </button>
             <button className="share-button">Share on Twitter</button>
           </div>
         </div>
