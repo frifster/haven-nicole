@@ -68,6 +68,16 @@
     url('/images/ritual.jpg');
 }
 
+.featured-image.self-care-ritual {
+  background-image: linear-gradient(rgba(139, 66, 151, 0.1), rgba(139, 66, 151, 0.2)),
+    url('/images/self-care-ritual.jpg');
+}
+
+.featured-image.natural-ingredients {
+  background-image: linear-gradient(rgba(139, 66, 151, 0.1), rgba(139, 66, 151, 0.2)),
+    url('/images/natural-ingredients.jpg');
+}
+
 .featured-content {
   padding: 60px;
 }

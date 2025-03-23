@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Transform Your Evening with Our Self-Care Ritual',
     category: 'Rituals',
     excerpt: 'Discover how to create a luxurious and effective evening self-care routine that will transform your skin while helping you unwind.',
-    imageClass: 'ritual',
+    imageClass: 'self-care-ritual',
     date: 'May 15, 2024',
     readTime: '5 min read',
     content: {
@@ -74,7 +74,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Understanding Natural Skincare Ingredients',
     category: 'Ingredients',
     excerpt: 'Learn about the powerful natural ingredients in Haven products and how they benefit your skin.',
-    imageClass: 'ingredients',
+    imageClass: 'natural-ingredients',
     date: 'May 12, 2024',
     readTime: '4 min read',
     content: {
@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Summer Skincare Tips for Glowing Skin',
     category: 'Tips',
     excerpt: 'Essential tips to keep your skin healthy, protected, and glowing during the hot summer months.',
-    imageClass: 'tips',
+    imageClass: 'glowing-skin',
     date: 'May 10, 2024',
     readTime: '3 min read',
     content: {
@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Science Behind Skin Moisturization',
     category: 'Science',
     excerpt: 'Dive deep into the science of how moisturizers work and why they are essential for healthy skin.',
-    imageClass: 'science',
+    imageClass: 'science-skin',
     date: 'May 8, 2024',
     readTime: '6 min read',
     content: {
@@ -215,7 +215,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Art of Mindful Self-Care: Beyond Skincare',
     category: 'Wellness',
     excerpt: 'Explore how to create a mindful self-care practice that nurtures your body and soul through therapeutic body care rituals.',
-    imageClass: 'wellness',
+    imageClass: 'art-skincare',
     date: 'May 5, 2024',
     readTime: '7 min read',
     content: {
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Sustainable Beauty: Our Commitment to the Planet',
     category: 'Sustainability',
     excerpt: 'Learn about our commitment to sustainable beauty practices and how we minimize our environmental impact while delivering effective skincare.',
-    imageClass: 'sustainability',
+    imageClass: 'sustainable',
     date: 'May 3, 2024',
     readTime: '5 min read',
     content: {

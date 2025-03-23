@@ -33,7 +33,7 @@ const Blog: React.FC = () => {
         </div>
 
         <div className="featured-post">
-          <div className="featured-image ritual"></div>
+          <div className="featured-image self-care-ritual"></div>
           <div className="featured-content">
             <span className="post-category">Featured</span>
             <h2>{blogPosts[0].title}</h2>

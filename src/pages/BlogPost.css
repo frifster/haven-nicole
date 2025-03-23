@@ -34,6 +34,13 @@
   ), url('/images/ritual.jpg');
 }
 
+.blog-post-hero.self-care-ritual {
+  background-image: linear-gradient(135deg,
+    rgba(83, 56, 71, 0.65),
+    rgba(70, 45, 82, 0.65)
+  ), url('/images/self-care-ritual.jpg');
+}
+
 .blog-post-hero.ingredients {
   background-image: linear-gradient(135deg,
     rgba(71, 56, 83, 0.95),
@@ -67,6 +74,41 @@
     rgba(56, 83, 71, 0.95),
     rgba(71, 83, 56, 0.95)
   ), url('/images/sustainability.jpg');
+}
+
+.blog-post-hero.natural-ingredients {
+  background-image: linear-gradient(135deg,
+    rgba(71, 56, 83, 0.65),
+    rgba(45, 70, 82, 0.65)
+  ), url('/images/natural-ingredients.jpg');
+}
+
+.blog-post-hero.glowing-skin {
+  background-image: linear-gradient(135deg,
+    rgba(71, 56, 83, 0.65),
+    rgba(45, 70, 82, 0.65)
+  ), url('/images/glowing-skin.jpg');
+}
+
+.blog-post-hero.science-skin {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.65),
+    rgba(71, 83, 56, 0.65)
+  ), url('/images/science-skin.jpg');
+}
+
+.blog-post-hero.art-skincare {
+  background-image: linear-gradient(135deg,
+    rgba(71, 83, 71, 0.65),
+    rgba(83, 71, 56, 0.65)
+  ), url('/images/art-skincare.jpg');
+}
+
+.blog-post-hero.sustainable {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.65),
+    rgba(71, 83, 56, 0.65)
+  ), url('/images/sustainable.jpg');
 }
 
 .blog-post-hero-content {
@@ -210,6 +252,13 @@
   ), url('/images/ritual.jpg');
 }
 
+.blog-image.self-care-ritual {
+  background-image: linear-gradient(135deg,
+    rgba(83, 56, 71, 0.65),
+    rgba(70, 45, 82, 0.65)
+  ), url('/images/self-care-ritual.jpg');
+}
+
 .blog-image.ingredients {
   background-image: linear-gradient(135deg,
     rgba(71, 56, 83, 0.95),
@@ -243,6 +292,41 @@
     rgba(56, 83, 71, 0.95),
     rgba(71, 83, 56, 0.95)
   ), url('/images/sustainability.jpg');
+}
+
+.blog-image.natural-ingredients {
+  background-image: linear-gradient(135deg,
+    rgba(71, 56, 83, 0.65),
+    rgba(45, 70, 82, 0.65)
+  ), url('/images/natural-ingredients.jpg');
+}
+
+.blog-image.glowing-skin {
+  background-image: linear-gradient(135deg,
+    rgba(71, 56, 83, 0.65),
+    rgba(45, 70, 82, 0.65)
+  ), url('/images/glowing-skin.jpg');
+}
+
+.blog-image.science-skin {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.65),
+    rgba(71, 83, 56, 0.65)
+  ), url('/images/science-skin.jpg');
+}
+
+.blog-image.art-skincare {
+  background-image: linear-gradient(135deg,
+    rgba(71, 83, 71, 0.65),
+    rgba(83, 71, 56, 0.65)
+  ), url('/images/art-skincare.jpg');
+}
+
+.blog-image.sustainable {
+  background-image: linear-gradient(135deg,
+    rgba(56, 83, 71, 0.65),
+    rgba(71, 83, 56, 0.65)
+  ), url('/images/sustainable.jpg');
 }
 
 @media (max-width: 768px) {
