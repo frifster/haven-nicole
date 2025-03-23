@@ -83,7 +83,6 @@ const BlogPostPage: React.FC = () => {
             <button className="share-button facebook" onClick={handleFacebookShare}>
               <FaFacebook /> Share
             </button>
-            <button className="share-button">Share on Twitter</button>
           </div>
         </div>
       </div>
