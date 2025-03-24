@@ -98,3 +98,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - 3D Models powered by [Pacdora](https://www.pacdora.com)
 - Design inspiration from modern e-commerce platforms
+- Images sourced from [Unsplash](https://unsplash.com), a platform providing high-quality, free-to-use photos
+  - Lifestyle and product photography
+  - Blog post images
+  - Hero section backgrounds
+  - Self-care and skincare imagery
