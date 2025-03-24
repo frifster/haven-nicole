@@ -21,9 +21,11 @@ const Philosophy: React.FC = () => {
           <Link to="/blog" className="read-more">Read More →</Link>
         </div>
         <div className="philosophy-decoration">
-          <div className="circle outer"></div>
-          <div className="circle inner"></div>
-          <div className="circle accent"></div>
+          <img 
+            src="/images/skincareblog.jpg" 
+            alt="Woman in bathrobe practicing self-care routine" 
+            className="philosophy-image"
+          />
         </div>
       </div>
     </section>
