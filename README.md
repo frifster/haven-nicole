@@ -90,6 +90,23 @@ The application uses CSS modules for component-specific styling, ensuring style 
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Deployment
+
+The application is configured for deployment on Vercel. The `vercel.json` configuration file handles client-side routing, ensuring that all routes work correctly even on page refresh or direct access.
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+This configuration ensures that all routes are redirected to the main index.html file, allowing React Router to handle the routing properly.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
