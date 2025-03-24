@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
@@ -48,6 +49,7 @@ const App: React.FC = () => {
             </Routes>
           </main>
           <Footer />
+          <Analytics />
         </div>
       </CartProvider>
     </Router>
